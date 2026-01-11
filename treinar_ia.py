@@ -6,17 +6,17 @@ import joblib
 import os
 
 def treinar_modelo():
-    if not os.path.exists('data/pedidos_limpos.csv'):
+    if not os.path.exists('dados/pedidos_limpos.csv'):
         print("Erro: O arquivo de dados limpos não foi encontrado!")
         return
 
-    dados = pd.read_csv('data/pedidos_limpos.csv')
+    dados = pd.read_csv('dados/pedidos_limpos.csv')
 
     #escolhendo a caracteristica que iremos treinar a IA
     X = dados[['tempo_entrega']] 
     y = dados['atrasou']
 
-    # Dividir os dados: 80% para a IA estudar e 20% para o teste final
+    # Divide os dados em 80% estudo e 20% teste
     X_treino, X_teste, y_treino, y_teste = train_test_split(X, y, test_size=0.2, random_state=42)
 
     print("Treinando a IA...")

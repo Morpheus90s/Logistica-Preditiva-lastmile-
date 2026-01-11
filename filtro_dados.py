@@ -27,7 +27,7 @@ def filtra_pedidos():
     if not os.path.exists('data'):
         os.makedirs('data')
     
-    pedidos_entregues.to_csv('data/pedidos_limpos.csv', index=False)
+    pedidos_entregues.to_csv('dados/pedidos_limpos.csv', index=False)
     
     print("Dados filtrados")
     print(f"Total de pedidos na pasta: {len(pedidos_entregues)}")
