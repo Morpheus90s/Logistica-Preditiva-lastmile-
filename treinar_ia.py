@@ -21,7 +21,7 @@ def treinar_modelo():
 
     print("Treinando a IA...")
 
-    #Criar e treinar a "Floresta de Decisão"
+    #Criar e treinar as decisões
     modelo = RandomForestClassifier(n_estimators=100)
     modelo.fit(X_treino, y_treino)
 
