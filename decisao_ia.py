@@ -26,9 +26,11 @@ def analisar_pedido(tempo_estimado, tipo_entrega):
     if probabilidade_atraso > 0.5 or tipo_entrega == 'Expressa':
         print("Decisão: [ALERTA] Risco alto detectado.")
         print("Ação: Enviar mensagem automatica para o cliente confirmar presenca.")
+        return True
     else:
         print("Decisão: Fluxo normal.")
         print("Ação: Seguir com o carregamento do veiculo.")
+        return False
 
 if __name__ == "__main__":
     # Teste 1: Tempo alto, detectar risco
