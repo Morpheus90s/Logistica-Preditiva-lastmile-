@@ -3,14 +3,17 @@
 Este projeto foi feito para aplicar na prática os conceitos do Nano Course de Inteligência Artificial e Computacional da FIAP. Como estudante, meu objetivo foi unir o que aprendi no curso com um problema real do e-commerce: o custo de entregas insucedidas.
 
 ## O Desafio
-O Last-Mile é a etapa mais cara. Entregas que falham (cliente ausente ou endereço comercial fechado) gerando prejuízos. Este sistema atua prevendo o risco de falha e sugerindo ações para tais.
+Entregas que falham no "Last-Mile" geram custos altos. Eu quis criar um fluxo que ajudasse o sistema a "pensar" antes de mandar o motorista para a rua:
+1. Prever se vai dar problema (IA).
+2. Seguir regras da empresa (Motor de Decisão).
+3. Resolver o problema se o cliente não estiver (Agente de Busca).
 
-## Arquitetura do Sistema
-O projeto foi estruturado seguindo os pilares do curso:
-
-1. Predição de Risco: Analisa o histórico para calcular a probabilidade da falha.
-2. Motor de Decisão: Aplica regras de negócio (ex: horários comerciais) para validar a entrega.
-3. Agente de Rota: Simula o recalculo durante a rota.
+## Como o projeto está organizado:
+'filtro_dados.py': Onde fiz a limpeza dos dados.
+'treinar_ia.py': Onde treinei a IA a prever os atrasos.
+'motor_decisao.py': Onde criei as regras (Ex: Se for Expressa, atenção total).
+'agente_logistico.py': Onde criei a busca pelo lugar mais perto para o pacote ficar.
+'main.py': O arquivo que junta tudo.
 
 ## Técnica
 - Linguagem: Python 3
@@ -18,10 +21,12 @@ O projeto foi estruturado seguindo os pilares do curso:
 - Bibliotecas Principais: Pandas, Scikit-learn, Joblib
 - Datasets: Dados reais de e-commerce (Olist) filtrados para 10.000 registros para facilitar o processamento no github.
 
----
-
-## Como Executar (Passo a Passo)
+## Como Executar
 
 ### 1. Preparar o Ambiente
 
 pip install -r requirements.txt
+
+### 2. Rodar o Sistema
+
+python main.py
