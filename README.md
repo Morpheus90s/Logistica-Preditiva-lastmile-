@@ -11,8 +11,8 @@ Entregas que falham no "Last-Mile" geram custos altos. Eu quis criar um fluxo qu
 ## Como o projeto está organizado:
 'filtro_dados.py': Onde fiz a limpeza dos dados.
 'treinar_ia.py': Onde treinei a IA a prever os atrasos.
-'motor_decisao.py': Onde criei as regras (Ex: Se for Expressa, atenção total).
-'agente_logistico.py': Onde criei a busca pelo lugar mais perto para o pacote ficar.
+'decisao.py': Onde criei as regras (Ex: Se for Expressa, atenção total).
+'agente.py': Onde criei a busca pelo lugar mais perto para o pacote ficar.
 'main.py': O arquivo que junta tudo.
 
 ## Técnica
